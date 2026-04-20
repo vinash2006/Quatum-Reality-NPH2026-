@@ -1,3 +1,10 @@
+############################################################################################################################
+#   Title      : Quantum Reality                                                                                           #
+#   Team       : Quantum Dots                                                                                              #                       
+#   Project by : Avinash, Krishnarajan, Viveneshwary                                                                       #
+#   National Physix Hackathon 2026                                                                                         #
+############################################################################################################################
+
 import pygame
 import math
 import random
@@ -438,13 +445,10 @@ while running:
                 c_res_delta = h_mc * (1 - math.cos(theta_rad))
                 
                 # --- VISUAL BOOST ---
-                #
                 visual_shift = (theta_deg / 180) * 40  # Shifts up to 40nm redder
                 lam_visual = lam_in_nm + visual_shift
                 c_final_color = wavelength_to_rgb(str(lam_visual))
-                # --- VISUAL BOOST ---
-                # Multiply the real physics delta by a large factor (e.g., 25000) 
-                # This scales the tiny nm shift into a visible hue change on the 400-700nm scale
+
                 hue_shift = c_res_delta * 25000 
                 lam_visual = lam_in_nm + hue_shift
                 c_final_color = wavelength_to_rgb(str(lam_visual))
